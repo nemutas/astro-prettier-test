@@ -1,0 +1,22 @@
+{
+  "name": "astro-prettier-test",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.0.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "ress": "^5.0.2",
+    "sass": "^1.66.1"
+  }
+}

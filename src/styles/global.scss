@@ -1,0 +1,16 @@
+@use './mixins/fonts.scss';
+
+html {
+  font-size: calc(1000vw / 1500);
+  background: #0e0e0e;
+  @include fonts.poppins;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-weight: inherit;
+}
