@@ -4,4 +4,5 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
   site: 'https://nemutas.github.io',
   base: '/astro-prettier-test/',
+  publicDir: './public',
 })
