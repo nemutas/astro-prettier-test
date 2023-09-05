@@ -1,8 +1,6 @@
 import 'overlayscrollbars/overlayscrollbars.css'
 import Lenis from '@studio-freight/lenis'
-import { OverlayScrollbars } from 'overlayscrollbars'
-
-console.log('entry')
+import { OverlayScrollbars, ClickScrollPlugin } from 'overlayscrollbars'
 
 const lenis = new Lenis()
 
@@ -13,6 +11,9 @@ function raf(time: number) {
 
 requestAnimationFrame(raf)
 
+// ---
+OverlayScrollbars.plugin(ClickScrollPlugin)
+
 const osInstance = OverlayScrollbars(document.body, {
-  scrollbars: { theme: 'os-theme-light', autoHide: 'scroll' },
+  scrollbars: { theme: 'os-theme-light', autoHide: 'scroll', clickScroll: true },
 })
