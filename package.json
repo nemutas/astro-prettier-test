@@ -10,7 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.8"
+    "@studio-freight/lenis": "^1.0.20",
+    "astro": "^3.0.8",
+    "overlayscrollbars": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",

@@ -1,0 +1,48 @@
+<div class="background" inert>
+  {
+    [...Array(5)].map((_, i) => (
+      <>
+        <p style={`--x: ${(i + 1) * 20 - 5 * 20};`}>
+          {[...Array(5)].map(() => (
+            <span>Lenis</span>
+          ))}
+        </p>
+        <p style={`--x: ${(i + 1) * 30 - 5 * 30};`}>
+          {[...Array(5)].map(() => (
+            <span>OverlayScrollbars</span>
+          ))}
+        </p>
+      </>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  @use '../styles/mixins/fonts.scss';
+
+  .background {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    height: 100lvh;
+    overflow: hidden;
+  }
+
+  p {
+    @include fonts.poppins(600);
+    color: #fff;
+    opacity: 0.015;
+    font-size: 15rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    translate: calc(var(--x) * 1rem) -5rem;
+
+    span + span {
+      margin-left: 5rem;
+    }
+
+    + p {
+      margin-top: 3rem;
+    }
+  }
+</style>

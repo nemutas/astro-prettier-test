@@ -1,0 +1,50 @@
+---
+interface Props {
+  items?: number
+}
+
+const { items = 1 } = Astro.props
+
+let dataSet = ['DPXytK8Z59Y', '1fTJmuL5Nxg', 'OeYUyI7jWwc', 'FrIhQy5j37w', 'rW-I87aPY5Y', 'lOXSEYO6a90', 'EhSxbBCjr9A', '1IKMRCWsfJ8']
+
+for (let i = dataSet.length; 1 < i; i--) {
+  const k = Math.floor(Math.random() * i)
+  ;[dataSet[k], dataSet[i - 1]] = [dataSet[i - 1], dataSet[k]]
+}
+---
+
+<div class="contents">
+  {
+    [...Array(items)].map((_, i) => (
+      <>
+        <img src={`https://source.unsplash.com/${dataSet[i % dataSet.length]}`} alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam in nobis dignissimos a dolorem quasi provident fuga non corporis, dolorum
+          asperiores minus eius minima cum quo error libero temporibus?
+        </p>
+      </>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .contents {
+    margin-top: 5rem;
+    width: 50%;
+
+    * + * {
+      margin-top: 3rem;
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+</style>

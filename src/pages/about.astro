@@ -1,12 +1,14 @@
 ---
 import Link from '@components/Link.astro'
 import Layout from '@components/Layout.astro'
+import Contents from '@components/Contents.astro'
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <h1>This page is About.</h1>
-    <Link href="/astro-prettier-test/">Home</Link>
+    <Link href="/astro-prettier-test">Home</Link>
+    <Contents items={5} />
   </main>
 </Layout>
 
@@ -14,5 +16,9 @@ import Layout from '@components/Layout.astro'
   h1 {
     color: #fff;
     font-size: 5rem;
+  }
+  main {
+    padding: 2rem;
+    min-height: 300vh;
   }
 </style>
